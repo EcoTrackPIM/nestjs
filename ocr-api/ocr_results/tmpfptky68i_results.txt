@@ -1,0 +1,12 @@
+OCR Processing Results
+=====================
+Extracted IDs: 6 8
+
+Matched Brands with Composition:
+
+
+Final Material Percentages:
+- Cotton: 74.29%
+- Wool: 0.00%
+- Linen: 8.57%
+- Polyester: 17.14%

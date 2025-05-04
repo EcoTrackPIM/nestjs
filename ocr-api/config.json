@@ -1,0 +1,1 @@
+{"brand_mappings": {"0": "Cotton Premium", "1": "Organic Cotton Blend", "2": "Polyester Standard", "288": "Wool Extra Fine", "112": "Linen Classic"}, "culture_types": ["Cotton", "Wool", "Linen", "Polyester"], "model_params": {"input_size": [384, 384], "normalize": true}, "output_dir": "./ocr_results"}

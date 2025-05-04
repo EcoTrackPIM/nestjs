@@ -1,0 +1,176 @@
+2025-04-04 17:54:22,121 - __main__ - INFO - Starting Brand Tags Scanner service on http://localhost:8000
+2025-04-04 17:54:22,162 - uvicorn.error - INFO - Started server process [13008]
+2025-04-04 17:54:22,162 - uvicorn.error - INFO - Waiting for application startup.
+2025-04-04 17:54:22,163 - uvicorn.error - INFO - Application startup complete.
+2025-04-04 17:54:22,165 - uvicorn.error - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): [winerror 10048] une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+2025-04-04 17:54:22,165 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-04-04 17:54:22,166 - uvicorn.error - INFO - Application shutdown complete.
+2025-04-04 17:58:29,227 - __main__ - INFO - Starting Brand Tags Scanner service on http://localhost:8000
+2025-04-04 17:58:29,285 - uvicorn.error - INFO - Started server process [11788]
+2025-04-04 17:58:29,286 - uvicorn.error - INFO - Waiting for application startup.
+2025-04-04 17:58:29,290 - uvicorn.error - INFO - Application startup complete.
+2025-04-04 17:58:29,293 - uvicorn.error - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): [winerror 10048] une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée
+2025-04-04 17:58:29,293 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-04-04 17:58:29,295 - uvicorn.error - INFO - Application shutdown complete.
+2025-04-04 18:01:04,591 - __main__ - INFO - Starting Brand Tags Scanner service on http://localhost:8000
+2025-04-04 18:01:04,634 - uvicorn.error - INFO - Started server process [19916]
+2025-04-04 18:01:04,634 - uvicorn.error - INFO - Waiting for application startup.
+2025-04-04 18:01:04,637 - uvicorn.error - INFO - Application startup complete.
+2025-04-04 18:01:04,641 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2025-04-04 18:01:09,551 - uvicorn.error - INFO - Shutting down
+2025-04-04 18:01:09,658 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-04-04 18:01:09,659 - uvicorn.error - INFO - Application shutdown complete.
+2025-04-04 18:01:09,660 - uvicorn.error - INFO - Finished server process [19916]
+2025-04-04 18:01:13,917 - __main__ - INFO - Starting Brand Tags Scanner service on http://localhost:8000
+2025-04-04 18:01:13,961 - uvicorn.error - INFO - Started server process [272]
+2025-04-04 18:01:13,962 - uvicorn.error - INFO - Waiting for application startup.
+2025-04-04 18:01:13,964 - uvicorn.error - INFO - Application startup complete.
+2025-04-04 18:01:13,968 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2025-04-04 18:01:19,877 - uvicorn.access - INFO - 127.0.0.1:59201 - "POST /ocr HTTP/1.1" 404
+2025-04-04 18:03:17,971 - uvicorn.access - INFO - 127.0.0.1:59292 - "POST /api/ocr HTTP/1.1" 404
+2025-04-04 18:04:14,301 - __main__ - INFO - Processing image: ./temp_uploads\scan_1743786254.287592_1743786254253-zara.jpg (Hash: 3356032316f12b1f1fd8ed83286a3aeef09fb51261b0c80dd0bbd5ba07491c8a)
+2025-04-04 18:04:14,796 - __main__ - ERROR - Processing error for image ./temp_uploads\scan_1743786254.287592_1743786254253-zara.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 451, in get_tesseract_version
+    output = subprocess.check_output(
+        [tesseract_cmd, '--version'],
+    ...<2 lines>...
+        stdin=subprocess.DEVNULL,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 472, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Le fichier spécifié est introuvable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 113, in process_image
+    ocr_data = await self._run_ocr_with_confidence(preprocessed_image)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 225, in _run_ocr_with_confidence
+    return await loop.run_in_executor(self.executor, sync_ocr)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 191, in sync_ocr
+    data = pytesseract.image_to_data(
+        image,
+        output_type=pytesseract.Output.DICT,
+        config=custom_config
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 590, in image_to_data
+    if get_tesseract_version(cached=True) < TESSERACT_MIN_VERSION:
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 163, in wrapper
+    wrapper._result = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 458, in get_tesseract_version
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-04-04 18:04:14,846 - __main__ - ERROR - API error: tesseract is not installed or it's not in your PATH. See README file for more information.
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 451, in get_tesseract_version
+    output = subprocess.check_output(
+        [tesseract_cmd, '--version'],
+    ...<2 lines>...
+        stdin=subprocess.DEVNULL,
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 472, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Le fichier spécifié est introuvable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 349, in process_image
+    result = await processor.process_image(temp_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 113, in process_image
+    ocr_data = await self._run_ocr_with_confidence(preprocessed_image)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 225, in _run_ocr_with_confidence
+    return await loop.run_in_executor(self.executor, sync_ocr)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\HP\Desktop\PIM flutter\nestjs-lowel\ocr-api\ocr_api.py", line 191, in sync_ocr
+    data = pytesseract.image_to_data(
+        image,
+        output_type=pytesseract.Output.DICT,
+        config=custom_config
+    )
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 590, in image_to_data
+    if get_tesseract_version(cached=True) < TESSERACT_MIN_VERSION:
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 163, in wrapper
+    wrapper._result = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\site-packages\pytesseract\pytesseract.py", line 458, in get_tesseract_version
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-04-04 18:04:14,856 - uvicorn.access - INFO - 127.0.0.1:59341 - "POST /api/scan HTTP/1.1" 500
+2025-04-04 18:04:54,027 - uvicorn.error - INFO - Shutting down
+2025-04-04 18:04:54,136 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-04-04 18:04:54,136 - uvicorn.error - INFO - Application shutdown complete.
+2025-04-04 18:04:54,137 - uvicorn.error - INFO - Finished server process [272]
+2025-04-04 18:04:57,797 - __main__ - INFO - Starting Brand Tags Scanner service on http://localhost:8001
+2025-04-04 18:04:57,846 - uvicorn.error - INFO - Started server process [11336]
+2025-04-04 18:04:57,847 - uvicorn.error - INFO - Waiting for application startup.
+2025-04-04 18:04:57,850 - uvicorn.error - INFO - Application startup complete.
+2025-04-04 18:04:57,855 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2025-04-04 18:07:56,145 - uvicorn.error - INFO - Shutting down
+2025-04-04 18:07:56,256 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-04-04 18:07:56,257 - uvicorn.error - INFO - Application shutdown complete.
+2025-04-04 18:07:56,257 - uvicorn.error - INFO - Finished server process [11336]

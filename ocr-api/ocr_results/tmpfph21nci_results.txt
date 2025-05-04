@@ -1,0 +1,13 @@
+OCR Processing Results
+=====================
+Extracted IDs: 2 1
+
+Matched Brands with Composition:
+- Polyester Standard (Polyester:100.0%)
+- Organic Cotton Blend (Cotton:70.0%, Linen:30.0%)
+
+Final Material Percentages:
+- Cotton: 73.75%
+- Wool: 0.00%
+- Linen: 11.25%
+- Polyester: 15.00%

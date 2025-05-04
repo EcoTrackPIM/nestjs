@@ -1,0 +1,33 @@
+Fashion Composition Analysis Report
+==================================
+Extracted Text: 2 7 0
+
+Detected Brands: None detected
+
+Matched Materials:
+- Generic: Standard Polyester (Polyester:100.0%)
+- Generic: Performance Blend (Polyester:85.0%, Spandex:15.0%)
+- Generic: Premium Cotton (Cotton:95.0%, Polyester:5.0%)
+
+Material Composition (Present):
+- Cotton: 31.67%
+- Polyester: 63.33%
+- Spandex: 5.0%
+
+Complete Material Composition:
+- Cotton: 31.67%
+- Wool: 0.0%
+- Linen: 0.0%
+- Polyester: 63.33%
+- Nylon: 0.0%
+- Silk: 0.0%
+- Spandex: 5.0%
+- Elastane: 0.0%
+- Rayon: 0.0%
+- Viscose: 0.0%
+- Acrylic: 0.0%
+- Cashmere: 0.0%
+
+Analysis Summary:
+- Total materials analyzed: 3
+- Primary material: Polyester (63.33%)

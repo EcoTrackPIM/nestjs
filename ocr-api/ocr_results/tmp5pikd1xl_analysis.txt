@@ -1,0 +1,33 @@
+Fashion Composition OCR Analysis
+===============================
+Extracted Text: 5 1
+
+Detected Brands: None detected
+
+Matched Materials:
+- Generic: Wool-Nylon Blend (Wool:75.0%, Nylon:25.0%)
+- Generic: Organic Cotton Blend (Cotton:70.0%, Linen:30.0%)
+
+Material Composition (Present):
+- Cotton: 35.0%
+- Wool: 37.5%
+- Linen: 15.0%
+- Nylon: 12.5%
+
+Complete Material Composition:
+- Cotton: 35.0%
+- Wool: 37.5%
+- Linen: 15.0%
+- Polyester: 0.0%
+- Nylon: 12.5%
+- Silk: 0.0%
+- Spandex: 0.0%
+- Elastane: 0.0%
+- Rayon: 0.0%
+- Viscose: 0.0%
+- Acrylic: 0.0%
+- Cashmere: 0.0%
+
+Analysis Summary:
+- Total materials analyzed: 2
+- Primary material: Wool (37.5%)

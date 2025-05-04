@@ -25,3 +25,8 @@ export class updateUser{
     @IsOptional()
     Age: number
 }
+
+export class LoginDto {
+    email: string;
+    password: string;
+  }

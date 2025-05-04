@@ -1,0 +1,12 @@
+OCR Processing Results
+=====================
+Extracted Text: temp_1743964738262-tag2
+
+Matched Brands with Composition:
+
+
+Final Material Percentages:
+- Cotton: 0.0%
+- Wool: 0.0%
+- Linen: 0.0%
+- Polyester: 0.0%

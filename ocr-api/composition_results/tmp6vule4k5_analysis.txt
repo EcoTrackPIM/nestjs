@@ -1,0 +1,13 @@
+Fashion Composition Analysis
+===========================
+Extracted Code: ZARA001
+
+Matched Brands:
+- Zara (Premium Collection): Cotton:80.0%, Polyester:15.0%, Elastane:5.0%
+
+Overall Material Composition:
+- Cotton: 80.00%
+- Polyester: 15.00%
+- Elastane: 5.00%
+
+Total Items Processed: 1

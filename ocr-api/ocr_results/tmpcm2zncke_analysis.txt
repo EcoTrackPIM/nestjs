@@ -1,0 +1,34 @@
+Fashion Composition OCR Analysis
+===============================
+Extracted Text: 2
+
+Detected Brands: None detected
+
+Matched Materials:
+- Generic: Standard Polyester (Polyester:100.0%)
+
+Material Composition (Present):
+- Cotton: 17.5%
+- Wool: 18.75%
+- Linen: 7.5%
+- Polyester: 46.25%
+- Nylon: 6.25%
+- Spandex: 3.75%
+
+Complete Material Composition:
+- Cotton: 17.5%
+- Wool: 18.75%
+- Linen: 7.5%
+- Polyester: 46.25%
+- Nylon: 6.25%
+- Silk: 0.0%
+- Spandex: 3.75%
+- Elastane: 0.0%
+- Rayon: 0.0%
+- Viscose: 0.0%
+- Acrylic: 0.0%
+- Cashmere: 0.0%
+
+Analysis Summary:
+- Total materials analyzed: 4
+- Primary material: Polyester (46.25%)

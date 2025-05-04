@@ -1,0 +1,17 @@
+OCR Processing Results
+=====================
+Extracted Text: 0 1 288 Premium Quality Fabric
+
+Detected Fashion Brands:
+- None detected
+
+Material Brands with Composition:
+- Cotton Premium (Cotton:95%, Polyester:5%)
+- Organic Cotton Blend (Cotton:70%, Linen:30%)
+- Wool Extra Fine (Wool:100%)
+
+Final Material Percentages:
+- Cotton: 55.00%
+- Wool: 33.33%
+- Linen: 10.00%
+- Polyester: 1.67%

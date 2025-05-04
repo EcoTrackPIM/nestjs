@@ -11,7 +11,7 @@ export class registerdto{
     @IsNotEmpty()
     password:string
     @IsOptional()
-    @IsArray()
+    
     roles:string[]
     @IsOptional()
     Profile_pic: string

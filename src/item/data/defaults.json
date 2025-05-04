@@ -1,0 +1,110 @@
+[
+  {
+    "name": "banana",
+    "category": "Food",
+    "amount": 1,
+    "tips": "Compost leftovers if possible",
+    "recyclable": false,
+    "location": "USA",
+    "carbonFootprint": "450"
+  },
+  {
+    "name": "Laptop",
+    "category": "Electronics",
+    "amount": 1,
+    "tips": "Recycle at e-waste centers",
+    "recyclable": true,
+    "location": "Global",
+    "carbonFootprint": "200000"
+  },
+  {
+    "name": "Perfume",
+    "category": "Personal Care",
+    "amount": 1,
+    "tips": "Reuse the bottle or recycle",
+    "recyclable": true,
+    "location": "France",
+    "carbonFootprint": "1200"
+  },
+  {
+    "name": "Pillow",
+    "category": "Home",
+    "amount": 1,
+    "tips": "Donate if still usable",
+    "recyclable": false,
+    "location": "Global",
+    "carbonFootprint": "1500"
+  },
+  {
+    "name": "Rifle",
+    "category": "Weapons",
+    "amount": 1,
+    "tips": "Recycle responsibly with authorized dealers",
+    "recyclable": true,
+    "location": "USA",
+    "carbonFootprint": "350000"
+  },
+  {
+    "name": "Saxophone",
+    "category": "Musical Instrument",
+    "amount": 1,
+    "tips": "Donate or recycle metal parts",
+    "recyclable": true,
+    "location": "Global",
+    "carbonFootprint": "40000"
+  },
+  {
+    "name": "Tractor",
+    "category": "Machinery",
+    "amount": 1,
+    "tips": "Sell for parts or recycle",
+    "recyclable": true,
+    "location": "Farms",
+    "carbonFootprint": "800000"
+  },
+  {
+    "name": "Vacuum Cleaner",
+    "category": "Electronics",
+    "amount": 1,
+    "tips": "Recycle electronics properly",
+    "recyclable": true,
+    "location": "Global",
+    "carbonFootprint": "50000"
+  },
+  {
+    "name": "Vase",
+    "category": "Home Decor",
+    "amount": 1,
+    "tips": "Donate or recycle glass/ceramic",
+    "recyclable": true,
+    "location": "Global",
+    "carbonFootprint": "500"
+  },
+  {
+    "name": "Volleyball",
+    "category": "Sports",
+    "amount": 1,
+    "tips": "Recycle rubber properly",
+    "recyclable": true,
+    "location": "Global",
+    "carbonFootprint": "300"
+  },
+  {
+    "name": "Menu",
+    "category": "Paper",
+    "amount": 1,
+    "tips": "Recycle paper menus",
+    "recyclable": true,
+    "location": "Restaurants",
+    "carbonFootprint": "100"
+  },
+  {
+    "name": "Cheeseburger",
+    "category": "Food",
+    "amount": 1,
+    "tips": "Reduce meat consumption for lower footprint",
+    "recyclable": false,
+    "location": "USA",
+    "carbonFootprint": "2400"
+  }
+]

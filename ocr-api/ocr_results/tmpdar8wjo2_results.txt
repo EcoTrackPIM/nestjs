@@ -1,0 +1,12 @@
+OCR Processing Results
+=====================
+Extracted IDs: 8 2
+
+Matched Brands with Composition:
+- Polyester Standard (Polyester:100.0%)
+
+Final Material Percentages:
+- Cotton: 0.00%
+- Wool: 0.00%
+- Linen: 0.00%
+- Polyester: 100.00%

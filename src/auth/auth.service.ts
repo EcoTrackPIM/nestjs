@@ -17,6 +17,13 @@ import * as randomstring from 'randomstring'
 import { resetCode } from './entities/resetCode.entity';
 import { Response } from 'express';
 import axios from 'axios';
+import * as nodemailer from 'nodemailer';
+import * as dotenv from 'dotenv';
+dotenv.config();
+import { OAuth2Client } from 'google-auth-library';
+
+
+
 
 @Injectable()
 export class AuthService {
@@ -29,25 +36,24 @@ export class AuthService {
     private readonly smsService: TwilioService,
   ){}
   async login(data: Logindto) {
-    const {email, password} = data
-
-    const user = await this.usermodel.findOne({email}).populate('Profile_pic')
-
+    const {email, password} = data;
+  
+    const user = await this.usermodel.findOne({email}).populate('Profile_pic');
+  
     if(!user){
-      throw new BadRequestException('wrong email')
+      throw new BadRequestException('wrong email');
     }
-
-    const pass = await bcrypt.compare(password, user.password)
+  
+    const pass = await bcrypt.compare(password, user.password);
     if(!pass){
-      throw new BadRequestException('wrong password')
+      throw new BadRequestException('wrong password');
     }
-
-    // const token = await this.jwtservice.sign({userId: user._id}, {expiresIn: '10h'})
+  
     const tokens = await this.generateUserTokens(user._id.toString());
     return {
       user,
       ...tokens
-    }
+    };
   }
 
 
@@ -113,6 +119,14 @@ export class AuthService {
     return await this.jwtservice.verify(token)
   }
 
+  async getProfile(userId: string) {
+    const user = await this.usermodel.findById(userId).populate('Profile_pic');
+    if (!user) {
+      throw new BadRequestException('User not found');
+    }
+    return user;
+  }
+
 
 
 
@@ -157,34 +171,40 @@ export class AuthService {
   }
 
 
+async forget(data: ForgetDto) {
+    const { email } = data;
+    const user = await this.usermodel.findOne({ email });
 
-
-
-
-
-  async forget(data: ForgetDto){
-    const {email} = data
-    const user = await this.usermodel.findOne({email})
-    if(!user){
-      throw new UnauthorizedException("Email not found")
+    if (!user) {
+        throw new UnauthorizedException("Email not found");
     }
+
     const resetcode = randomstring.generate({
-      length: 4,
-      charset: 'numeric'
-  });
+        length: 4,
+        charset: 'numeric'
+    });
+
     try {
-      const expiryDate = new Date();
-      expiryDate.setHours(expiryDate.getHours() + 1); 
-      await this.resetcodemodel.create({
-        email: user.email,
-        code: resetcode,
-        expiryDate: expiryDate
-      })
-      const mail = await this.mailService.sendMail({
-        from: 'projet@domain.com',
-        to: user.email,
-        subject: 'Reset Password',
-        html: `
+        const expiryDate = new Date();
+        expiryDate.setHours(expiryDate.getHours() + 1);
+
+        await this.resetcodemodel.create({
+            email: user.email,
+            code: resetcode,
+            expiryDate: expiryDate
+        });
+
+        // Configure Nodemailer Transporter
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER, // Use environment variables
+                pass: process.env.EMAIL_PASS
+            }
+        });
+
+        // Email HTML Template
+        const emailHtml = `
           <!DOCTYPE html>
           <html lang="en">
             <head>
@@ -253,15 +273,23 @@ export class AuthService {
               </div>
             </body>
           </html>
-        `
-      });            
-      return {message: "mail sent to this email"}
-    } catch (error) {
-      console.log(error)
-      return {error}
-    }
+        `;
 
-  }
+        // Send Email
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: user.email,
+            subject: 'Reset Password',
+            html: emailHtml
+        });
+
+        return { message: "Mail sent successfully", resetcode };
+    } catch (error) {
+        console.error("Error sending email:", error);
+        throw new Error("Failed to send reset password email");
+    }
+}
+
 
 
 
@@ -284,6 +312,43 @@ export class AuthService {
     user.password = newhashedpass
     user.save()
     return {message: "password reset successfully"}
+  }
+
+
+
+  async googleLogin(token: string) {
+    const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+  
+    const ticket = await client.verifyIdToken({
+      idToken: token,
+      audience: process.env.GOOGLE_CLIENT_ID,
+    });
+  
+    const payload = ticket.getPayload();
+    if (!payload) {
+      throw new UnauthorizedException('Invalid Google token');
+    }
+  
+    const { email, name, picture } = payload;
+  
+    let user = await this.usermodel.findOne({ email });
+  
+    if (!user) {
+      user = await this.usermodel.create({
+        name,
+        email,
+        password: await bcrypt.hash('defaultpassword', 10), // Dummy password
+        profilePic: picture,
+      });
+    }
+  
+    const tokens = await this.generateUserTokens(user._id.toString());
+  
+    return { user, ...tokens };
+  }
+
+  async findUserById(userId: string) {
+    return this.usermodel.findById(userId);
   }
 
 

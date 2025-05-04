@@ -1,0 +1,10 @@
+OCR Processing Results
+=====================
+Extracted Text: 0 1
+
+Matched Brands:
+- Cotton Premium
+- Organic Cotton Blend
+
+Culture Percentages:
+- Cotton: 100.00%
